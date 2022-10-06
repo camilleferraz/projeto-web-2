@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><strong>LOGO</strong></div>
+        
+        <ul class="menu">
+            <li><a href="">Menu</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Rewards</a></li>
+            <li><a href="">Gift cards</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+
+        <div class="container-search">
+            <input type="text" class="input"  placeholder=" Search">
+            <button class="lupa"><img src="./imagens/lupa.png" class="lupa" alt="" ></button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <article class="left-content">
+            <h1 class="tittle">Fresh <span id="fruitName" type="text">Cherry</span> Juice</h1>
+            
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quasi expedita soluta incidunt mollitia reprehenderit quis dolorum est libero, laboriosam esse possimus sapiente nobis adipisci explicabo quas doloremque facere aliquam?</div>
+    
+            <h5>Serve with:</h5>
+    
+            <div class="addProduct">
+                
+                <div class="add-container">
+                <button class="buttonMenos">-</button>
+                <div class="qtde" type="number">1</div>
+                <button class="buttonMais">+</button>
+                </div>
+    
+                <button class="add-to-cart">ADD TO CART</button>
+    
+            </div>
+        </article>
+
+        <article class="right-content">
+            <img class="mainImg" src="./imagens/cherry-4.jpeg"  alt="">
+        </article>
+
+        <div>
+            <ul class="options-fruit">
+                <li><img src="./imagens/10.png" alt="" onclick="imgSlider('./imagens/cherry-4.jpeg');colorChanger('#f3cdce');nameChanger('Cherry')"></li>
+                <li><img src="./imagens/9.png" alt="" onclick="imgSlider('./imagens/peach-3.jpeg');colorChanger('#fbdeb3');nameChanger('Peach')"></li>
+                <li><img src="./imagens/blueberry-icon.png" alt="" onclick="imgSlider('./imagens/blueberry-1.jpg');colorChanger('#d3d4e9');nameChanger('Blueberry')"></li>
+                <li><img src="./imagens/mint-icon.png" alt="" onclick="imgSlider('./imagens/mint-1.jpeg');colorChanger('#d9e3a5');nameChanger('Mint')"></li>
+            </ul>
+        </div>
+     </main>
+
+<script type="text/javascript">
+
+function imgSlider(anything){
+    document.querySelector('.mainImg').src = anything;
+}
+
+function colorChanger(color){
+    let backgroundMain = document.querySelector('body')
+    backgroundMain.style.background = color;
+}
+
+function nameChanger(novoNome){
+    let nomeFruta = document.querySelector('#fruitName')
+    nomeFruta.innerHTML=novoNome
+    
+    let titulo = document.querySelector('.tittle')
+    
+    if(novoNome==="Blueberry"){
+    titulo.style.fontSize = '4vw'
+    }else{
+        titulo.style.fontSize = '5vw'
+    }
+    
+}
+
+</script>
+     
+</body>
+</html>
