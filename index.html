@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
     <header>
         <div class="logo"><strong>LOGO</strong></div>
         
@@ -35,13 +37,19 @@
             <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quasi expedita soluta incidunt mollitia reprehenderit quis dolorum est libero, laboriosam esse possimus sapiente nobis adipisci explicabo quas doloremque facere aliquam?</div>
     
             <h5>Serve with:</h5>
+
+            <div class="serve-with">
+                <span><img src="./imagens/donus.png" alt=""><img src="./imagens/fruits.png" alt=""><img src="./imagens/cookie.png" alt=""></span>
+
+                
+            </div>
     
             <div class="addProduct">
                 
                 <div class="add-container">
-                <button class="buttonMenos">-</button>
-                <div class="qtde" type="number">1</div>
-                <button class="buttonMais">+</button>
+                <button id="buttonMenos" onclick = "subtrair()">-</button>
+                <div id="qtde">0</div>
+                <button id="buttonMais" onclick = "adicionar()">+</button>
                 </div>
     
                 <button class="add-to-cart">ADD TO CART</button>
@@ -55,12 +63,14 @@
 
         <div>
             <ul class="options-fruit">
-                <li><img src="./imagens/10.png" alt="" onclick="imgSlider('./imagens/cherry-4.jpeg');colorChanger('#f3cdce');nameChanger('Cherry')"></li>
-                <li><img src="./imagens/9.png" alt="" onclick="imgSlider('./imagens/peach-3.jpeg');colorChanger('#fbdeb3');nameChanger('Peach')"></li>
-                <li><img src="./imagens/blueberry-icon.png" alt="" onclick="imgSlider('./imagens/blueberry-1.jpg');colorChanger('#d3d4e9');nameChanger('Blueberry')"></li>
-                <li><img src="./imagens/mint-icon.png" alt="" onclick="imgSlider('./imagens/mint-1.jpeg');colorChanger('#d9e3a5');nameChanger('Mint')"></li>
+                <li><img src="./imagens/10.png" id="cherry" alt="" onclick="imgSlider('./imagens/cherry-4.jpeg');nameChanger('Cherry');colorChanger('#f3cdce')"></li>
+                <li><img src="./imagens/9.png" class="peach" alt="" onclick="imgSlider('./imagens/peach-3.jpeg');colorChanger('#fbdeb3');nameChanger('Peach')"></li>
+                <li><img src="./imagens/blueberry-icon.png" class="blueberry" alt="" onclick="imgSlider('./imagens/blueberry-1.jpg');colorChanger('#d3d4e9');nameChanger('Blueberry')"></li>
+                <li><img src="./imagens/mint-icon.png" alt="" class="mint" onclick="imgSlider('./imagens/mint-1.jpeg');colorChanger('#d9e3a5');nameChanger('Mint')"></li>
             </ul>
-        </div>
+           
+        </d>
+
      </main>
 
 <script type="text/javascript">
@@ -87,6 +97,31 @@ function nameChanger(novoNome){
     }
     
 }
+
+function adicionar(){
+        
+        let quantidade = document.getElementById('qtde');
+        
+        StringNum = parseInt(quantidade.innerHTML)
+        
+        quantidade.innerHTML = StringNum + 1
+       
+
+}
+
+function subtrair(){
+        
+        let quantidade = document.getElementById('qtde');
+        
+        stringNum = parseInt(quantidade.innerHTML)
+
+        if(stringNum>0){ quantidade.innerHTML = stringNum - 1}
+         
+      
+
+}
+
+
 
 </script>
      

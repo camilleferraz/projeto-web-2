@@ -9,35 +9,42 @@
 
 body{
     background-color: #f3cdce;
+   
 }
 
 header{
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    align-items: center;
+    width: 90vw;
     padding: 20px;
    
     
 }
 
 .logo{
-color: #ea1951;    
+color: #ea1951; 
+margin-left:5vw ;  
 }
 
 .lupa{
     background-color: #ea1951;
     border: none;
     width: 2vw;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .input{
     border: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .container-search{
     display: flex;
     height: 4vh;
-    border: solid 1.5px gray;
     border-radius: 5px;
     padding: 0.2em;
 }
@@ -52,6 +59,13 @@ color: #ea1951;
     
 }
 
+.serve-with{
+height: 12vh;
+width: 30vw;
+display: flex;
+justify-content: flex-start;
+}
+
 .left-content::before{
     content: '';
     width: 6vw;
@@ -63,14 +77,21 @@ color: #ea1951;
 
 .menu{
     display: flex;
-    justify-content: space-around;
     min-width: 744 px;
     list-style: none;
+    align-items: center;
+    
+    
+}
+
+.menu li{
+  
+    width: 10vw;
+    min-width: 115px;
 }
 
 .menu li a{
     margin-left: 4vw;
-    display: flex;
     text-decoration: none;
     color: #ea1951;
 }
@@ -80,7 +101,8 @@ color: #ea1951;
     background-color: #ea1951;
     color: white;
     border-radius: 5px;
-    padding:  0px 2px;
+    padding: 0.2em;
+    
 }
 
 
@@ -103,14 +125,24 @@ color: #ea1951;
     background-color: white;
 }
 
-.buttonMais,.buttonMenos{
+
+#buttonMais:hover,#buttonMenos:hover{
+   color: #ea1951;
+   font-weight: bold;
+   font-size: 1.2em;
+  
+   
+}
+
+#buttonMais,#buttonMenos{
     background-color: white;
     height: 4vh;
     width: 5vw;
     border: none;
+    cursor: pointer;
    
 }
-.qtde{
+#qtde{
     background-color: white;
 }
 
@@ -126,6 +158,7 @@ color: #ea1951;
     border-radius: 3.5px;
     color: white;
     font-size: 10px;
+    cursor: pointer;
 
 }
 
@@ -158,3 +191,9 @@ border-radius: 50%;
 transform: translateY(-15px);
 transition: 0.5s;
 }
+
+#cherry{
+    position: relative;
+}
+
+
